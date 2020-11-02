@@ -1,0 +1,12 @@
+---
+title: "About me"
+output: 
+  html_document:
+    self_contained: no
+    toc: true
+    toc_float: true
+---
+
+# This page has information about me
+
+I am in p8105
