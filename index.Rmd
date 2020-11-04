@@ -1,5 +1,5 @@
 ---
-title: "My awesome website"
+title: "My Resume"
 output: 
   html_document:
     self_contained: no
@@ -7,24 +7,16 @@ output:
     toc_float: true
 ---
 
-# This is Jeff's awesome website
+# This is my website for P8105 assignment 4
 
-![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif)
-
-## Subsection
-
-Add some text here
-
-```{r}
-rnorm(10)
-```
+![](Columbia.jpg)
 
 ## Links
 
-Link to useful sites for data science
+Links to my GitHub and Email
 
-* [Google](https://www.google.com/)
-* [P8105](https://p8105.com)
+* [GitHub](https://github.com/Leooolzh/Leooolzh.github.io)
+* [P8105](leomultiverse@gmail.com)
 
 ## Local image
 ![](Racoon.jpg)

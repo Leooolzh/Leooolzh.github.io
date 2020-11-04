@@ -7,6 +7,28 @@ output:
     toc_float: true
 ---
 
-# This page has information about me
+# This page has my academic and professional experiences
 
-I am in p8105
+***
+#### Education:   
+
+University of British Columbia, Vancouver, Canada   
+
+  Bachelor of Science in Mathematics   
+  
+  Minor in Economics   
+  
+  
+***
+#### Projects and Research Experience:   
+
+Research assistant of Prof. Sergei Severinov   
+
+Helped to solve a system of ordinary differential equations using Matlab   
+
+***
+#### Work Experiences   
+
+Intern bioinformatician at Basecare Medical Devices, Suzhou, China   
+
+  

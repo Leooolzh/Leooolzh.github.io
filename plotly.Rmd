@@ -1,0 +1,54 @@
+---
+title: "Plotly"
+output: 
+  html_document:
+    self_contained: no
+    toc: true
+    toc_float: true
+---
+
+Load the data
+
+```{r}
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+```
+
+
+```{r}
+data("rest_inspec")
+
+rest_inspec = 
+  rest_inspec %>% 
+  filter(grade %in% c("A","B","C"),
+         cuisine_description %in% c("American",
+                                    "French",
+                                    "Chinese",
+                                    "Seafood",
+                                    "Italian",
+                                    "Japanese",
+                                    "Pizza")) %>% 
+  select(dba, cuisine_description, boro, street, building, zipcode, grade, grade_date, score, record_date, action, critical_flag, violation_description, inspection_type, inspection_date)
+```
+
+
+```{r}
+rest_inspec %>%
+  filter(cuisine_description == "Japanese") %>% 
+  plot_ly(x = ~street,
+          y = ~boro)
+```
+
+```{r}
+rest_inspec %>%
+  plot_ly(labels = ~cuisine_description,
+          type = "pie")
+```
+
+```{r}
+rest_inspec %>%
+  plot_ly(x = ~boro,
+          y = ~score)
+```
+

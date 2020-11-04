@@ -1,0 +1,62 @@
+---
+title: "Dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    source: embed
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+
+data("rest_inspec")
+
+rest_inspec = 
+  rest_inspec %>% 
+  filter(grade %in% c("A","B","C"),
+         cuisine_description %in% c("American",
+                                    "French",
+                                    "Chinese",
+                                    "Seafood",
+                                    "Italian",
+                                    "Japanese",
+                                    "Pizza")) %>% 
+  select(dba, cuisine_description, boro, street, building, zipcode, grade, grade_date, score, record_date, action, critical_flag, violation_description, inspection_type, inspection_date)
+
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+rest_inspec %>%
+  filter(cuisine_description == "Japanese") %>% 
+  plot_ly(x = ~street,
+          y = ~boro)
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+rest_inspec %>%
+  plot_ly(labels = ~cuisine_description,
+          type = "pie")
+```
+
+### Chart C
+
+```{r}
+rest_inspec %>%
+  plot_ly(x = ~boro,
+          y = ~score)
+```
+
