@@ -16,10 +16,10 @@ output:
 Links to my GitHub and Email
 
 * [GitHub](https://github.com/Leooolzh/Leooolzh.github.io)
-* [P8105](leomultiverse@gmail.com)
+* [Gmail](leomultiverse@gmail.com)
 
 ## Local image
-![](Racoon.jpg)
+![](Cutie.jpg)
 
 ## link to page within the site
 
